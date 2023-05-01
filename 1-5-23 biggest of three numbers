@@ -1,0 +1,10 @@
+
+a=int(input("Enter a value:"))
+b=int(input("Enter b vlaue:"))
+c=int(input("Enter c vlaue:"))
+if a>=b and a>=c:
+    print("a is biggest number")
+elif b>=a and b>=c:
+    print("b is biggest number")
+else:
+    print("c is biggest number")
