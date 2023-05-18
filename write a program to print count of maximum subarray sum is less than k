@@ -1,0 +1,15 @@
+def max_subarray_product(arr,k):
+    max_prod=0
+    curr_prod=1 
+    left=0
+    for i in range(len(arr)):
+        curr_prod=curr_prod*arr[i]
+        while curr_prod>k and left<=i:
+            curr_prod=curr_prod//arr[left]
+            left=left+1
+        max_prod=max(max_prod,curr_prod)
+    return max_prod
+
+arr=list(map(int,input().split()))
+k=int(input())
+print(max_subarray_product(arr,k))
