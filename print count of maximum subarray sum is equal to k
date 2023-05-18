@@ -1,0 +1,14 @@
+def count_subarray(arr,k):
+    c=0
+    for i in range(len(arr)):
+        sum=0
+        for j in range(i,len(arr)):
+            sum=sum+arr[j]
+            if sum==k:
+                c=c+1
+            
+    return c
+
+arr=list(map(int,input().split()))
+k=int(input())
+print(count_subarray(arr,k))
